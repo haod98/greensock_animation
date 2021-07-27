@@ -2,5 +2,23 @@
   "dependencies": {
     "gsap": "^3.7.1",
     "tailwindcss": "^2.2.7"
-  }
+  },
+  "name": "webshop",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "tailwind": "tailwindcss build styles/styles.css -o output/custom.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haod98/webshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haod98/webshop/issues"
+  },
+  "homepage": "https://github.com/haod98/webshop#readme"
 }
