@@ -1,15 +1,19 @@
 {
   "dependencies": {
-    "gsap": "^3.7.1",
-    "tailwindcss": "^2.2.7"
+    "gsap": "^3.7.1"
   },
   "name": "webshop",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.7"
+  },
   "scripts": {
-    "tailwind": "tailwindcss build styles/styles.css -o output/custom.css" 
+    "tailwind": "tailwindcss -i styles/style.css -o output/custom.css && NODE_ENV=production postcss styles/style.css -o output/compiled.css"
   },
   "repository": {
     "type": "git",
