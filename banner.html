@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output/custom.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tlt5gfw.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"
+        integrity="sha512-yVNhaX0I/lk5GtKya9lE27DopFWV791zsCnMpztLnGJgWESdN825wbH0/I1HfwdNgAKFsq9pXv5vpXjTAU7h3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="relative overflow-hidden">
+        <div class="h-32 bg-black w-100">
+            <p
+                class="j-heading absolute text-white font-bold uppercase text-2xl right-1/2 tracking-widest transform translate-x-2/4">
+                Be
+                the</p>
+            <p
+                class="j-fastest absolute text-white font-bold italic uppercase text-3xl right-1/2 top-1/4 transform translate-x-2/4 transform translate-x-2/4 tracking-wide">
+                fastest
+            </p>
+            <p
+                class="j-strongest absolute text-white font-extrabold uppercase text-2xl top-1/4 right-1/2 transform translate-x-2/4	top: 25%; text-6xl ">
+                strongest</p>
+            <p
+                class="j-athlete absolute text-white font-extrabold uppercase text-2xl top-1/4 right-1/2 transform translate-x-2/4 opacity-0	top: 25%; text-6xl ">
+                Athlete</p>
+            <p
+                class="j-quote absolute text-white font-extrabold uppercase text-4xl top-2/4 right-1/2 transform translate-x-2/4 -translate-y-2/4 opacity-0 ">
+                Just do it</p>
+            <svg xmlns="http://www.w3.org/2000/svg"
+                class="j-logo w-20 text-white fill-current opacity-0 top-2/4 right-1/2 transform translate-x-2/4 -translate-y-2/4 absolute"
+                viewBox="135.5 361.375 420.321 149.8" overflow="visible">
+                <path
+                    d="M181.865 511.114c-12.524-.497-22.77-3.924-30.782-10.29-1.53-1.215-5.173-4.86-6.395-6.398-3.25-4.086-5.458-8.061-6.931-12.473-4.534-13.579-2.2-31.397 6.673-50.953 7.598-16.742 19.322-33.347 39.776-56.344 3.013-3.384 11.986-13.281 12.044-13.281.021 0-.468.847-1.083 1.879-5.318 8.908-9.87 19.4-12.348 28.485-3.982 14.576-3.502 27.085 1.407 36.784 3.386 6.683 9.19 12.47 15.719 15.67 11.428 5.6 28.16 6.063 48.592 1.355 1.407-.326 71.115-18.83 154.91-41.122 83.793-22.294 152.363-40.52 152.374-40.506.024.02-194.677 83.333-295.749 126.555-16.007 6.844-20.287 8.572-27.812 11.214-19.236 6.755-36.467 9.978-50.395 9.425z" />
+            </svg>
+        </div>
+    </div>
+</body>
+<script>
+    const tl = gsap.timeline();
+    tl.from('.j-fastest', { x: -2000, duration: 1 });
+    tl.to('.j-fastest', { x: 100, duration: 1.5 })
+    tl.to('.j-fastest', { x: 1200 }, '-=.5')
+    tl.addLabel('strongest')
+    tl.from('.j-strongest', { y: 100, scale: 0.5 })
+    tl.to('.j-strongest', { scale: 0, duration: .3 }, '+=1')
+    tl.to('.j-athlete', { opacity: 1, duration: 1 }, '+=.5')
+    tl.to('.j-athlete', { autoAlpha: 0, duration: 1 })
+    tl.to('.j-heading', { autoAlpha: 0, duration: 1 }, '<')
+    tl.addLabel('logo')
+    tl.to('.j-quote', { opacity: 1, duration: 1.5 })
+    tl.to('.j-quote', { y: 20, duration: 1 })
+    tl.to('.j-logo', { opacity: 1, duration: 1.3, y: -40 }, '+=.5')
+    tl.to('.j-logo', { fill: "rgb(180, 25, 25)" })
+
+
+</script>
+
+</html>
