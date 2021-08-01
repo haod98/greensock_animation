@@ -83,11 +83,11 @@
 </body>
 <script>
     const tl = gsap.timeline();
-    tl.from('.j-navigation li', { y: -50, opacity: 0, stagger: 0.2 });
+    tl.from('.j-navigation li', { y: -50, opacity: 0});
     tl.from('.j-mainHeader', { x: -50, opacity: 0, duration: 1.5 });
     tl.from('.j-mainText', { y: -30, opacity: 0, duration: .7 }, "-=0.3")
-    tl.from('.j-confirmBtn', { y: 30, opacity: 0 })
-    tl.from('.j-sideImg', { x: -100, opacity: 0, duration: 2.5 }, "+=.5")
+    tl.from('.j-confirmBtn', { y: 30, opacity: 0, duration: .7 }, "+=0.3")
+    tl.from('.j-sideImg', { x: -100, opacity: 0, duration: 2 }, "+=.3")
     tl.to('.j-logo', { fill: 'rgba(200, 28, 28)' }, '+=1');
 </script>
 
