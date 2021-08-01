@@ -76,7 +76,7 @@
                     your shoes</a>
             </div>
             <div class="height-100vh flex absolute inset-y-0 j-sideImg">
-                <img src="./img/jordans.jpg" alt="A shoes from Nike. Air Jordan 1 Chicagos">
+                <img src="./img/jordans1.jpg" alt="A shoes from Nike. Air Jordan 1 Chicagos">
             </div>
         </div>
     </main>
@@ -85,7 +85,7 @@
 const tl = gsap.timeline();
 tl.from('.j-navigation li', {y: -50, opacity: 0, stagger: 0.2});
 tl.from('.j-mainHeader', {x: -50, opacity: 0, duration: 1.5});
-tl.from('.j-mainText', {y: -30, opacity: 0, duration: 1.5}, "-=0.3")
+tl.from('.j-mainText', {y: -30, opacity: 0, duration: .7}, "-=0.3")
 tl.from('.j-confirmBtn', {y: 30, opacity: 0})
 tl.from('.j-sideImg', {x:-100, opacity: 0, duration: 2.5}, "+=.5")
 tl.to('.j-logo', {fill: 'rgba(200, 28, 28)'}, '+=1');
